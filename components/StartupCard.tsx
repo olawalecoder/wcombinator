@@ -2,9 +2,10 @@ import {formatDate} from "@/lib/utils";
 import {EyeIcon} from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import {Button} from "@/components/ui/button";
 
 const StartupCard = ({ post }: { post: StartupTypeCard}) => {
-    const { _createdAt, views, author:{ _id: authorId, name }, title, category, _id, } = post;
+    const { _createdAt, views, author:{ _id: authorId, name }, title, category, _id, description, image } = post;
     return (
         <li className="startup-card group">
             <div className="flex-between">
@@ -39,10 +40,24 @@ const StartupCard = ({ post }: { post: StartupTypeCard}) => {
             </div>
 
             <Link href={`/startup/${_id}`}>
-                <p>
-
+                <p className="startup-card_desc">
+                    {description}
                 </p>
+                <img src={image} alt="placeholder" className="startup-card_img" />
             </Link>
+
+            <div className="flex-between gap-3 mt-5">
+                <Link href={`/?query=${category.toLowerCase()}`}>
+                    <p className="text-16-medium"> {category}</p>
+                </Link>
+
+                <Button className="startup-card_btn">
+                    <Link href={`/startup/${_id}`}>
+                        Details
+                    </Link>
+                </Button>
+
+            </div>
         </li>
     )
 }

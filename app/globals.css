@@ -148,6 +148,14 @@
     @apply w-full h-[164px] rounded-[10px] object-cover;
   }
 
+  .h-400 {
+    @apply w-full h-[500px] rounded-[10px] object-cover;
+  }
+
+  .avatar {
+    @apply w-[64] h-[64] object-cover;
+  }
+
   .startup-card_btn {
     @apply rounded-full bg-black-200 font-medium text-[16px] text-white px-5 py-3 !important;
   }

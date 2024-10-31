@@ -30,11 +30,11 @@ const Page = async ({ params } : {params: Promise<{ id: string }>}) => {
                 <p className="sub-heading !max-w-5xl">{post.description}</p>
             </section>
 
-            <section className="section_container">
+            <section className="section_container grid justify-center">
                 <img
                     src={post.image}
                     alt={post.title}
-                    className="h-400 rounded-xl"
+                    className="h-400 max-w-4xl rounded-xl"
                 />
 
                 <div className="space-y-5 mt-10 max-w-4xl mx-auto">

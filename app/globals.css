@@ -149,7 +149,7 @@
   }
 
   .h-400 {
-    @apply w-full h-[400px] rounded-[10px] object-cover;
+    @apply w-full h-[500px] rounded-[10px] object-cover;
   }
 
   .avatar {

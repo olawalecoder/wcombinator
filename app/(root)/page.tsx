@@ -2,6 +2,7 @@ import SearchForm from "@/components/SearchForm";
 import StartupCard, {StartupTypeCard} from "@/components/StartupCard";
 import {STARTUPS_QUERY} from "@/sanity/lib/queries";
 import {sanityFetch, SanityLive} from "@/sanity/lib/live";
+import {auth} from "@/auth";
 
 export const metadata = {
     title: "Home | StartupFunders",
@@ -15,23 +16,11 @@ export default async function Home({searchParams} :{
 
     const params = { search: query || null };
 
+    // const session = await auth();
+    //
+    // console.log(session?.id);
+
     const {data: posts} = await sanityFetch({query: STARTUPS_QUERY, params })
-
-    // console.log(JSON.stringify(posts, null, 2));
-
-    // const posts = [
-    //     {
-    //         _createdAt: new Date(),
-    //         views: 10,
-    //         author: {_id: 1, name:"Olawale"},
-    //         _id: 1,
-    //         description: "This idea is a revolutionary one",
-    //         image:
-    //         "https://images.unsplash.com/photo-1729396877734-801af2fa5709?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    //         category: "Animals",
-    //         title: "Black Diamond",
-    //     },
-    //    ];
 
     return (
         <>

@@ -20,7 +20,7 @@ const Navbar = async () => {
                         <>
                             <Link href="/startup/create" className="flex flex-row-reverse">
                                 <span className="max-sm:hidden">Create</span>
-                                <BadgePlus className="size-6 sm:hidden" />
+                                <BadgePlus className="size-5 sm:hidden" />
                             </Link>
 
                             <form action={async () => {
@@ -30,7 +30,7 @@ const Navbar = async () => {
                             }}>
                                 <button type="submit" className="flex flex-row-reverse">
                                     <span className="max-sm:hidden">Logout</span>
-                                    <LogOut className="size-6 sm:hidden text-red-500" />
+                                    <LogOut className="size-5 sm:hidden text-red-500" />
                                 </button>
                             </form>
 

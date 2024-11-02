@@ -23,7 +23,9 @@ const View = async ({ id } :{ id: string }) => {
                 <Ping/>
             </div>
             <p className="view-text">
-                <span className="font-regular">{totalViews.toLocaleString()} view{totalViews !== 1 ? 's' : ''}</span>
+                <span className="font-regular">
+                    {totalViews ? totalViews.toLocaleString() : 0 } view{totalViews !== 1 ? 's' : ''}
+                </span>
             </p>
         </div>
     )
